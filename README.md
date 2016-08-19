@@ -1,6 +1,6 @@
 # Country-music-therapy
 
-#### A web app to help people deal with their life challenges with the power of country music.
+#### A web app to help people deal with life challenges through the power of country music.
 
 #### By Molly McGlone, August 2016
 
@@ -58,6 +58,9 @@ firebase: {
 * Start the project with `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
+## Known Issues/Bugs
+
+* Currently help requests can be tagged and users can view the help requests associated with each tag.  However, the many-to-many relationship between these models is not fully functional in that if a user adds a tag to a request in the app, a new tag object will be created that is completely independent of previous tag objects.  Duplicate tags can be created in this way, and it is not currently possible for users within the app to connect multiple help requests with the same tag object.
 
 ## Support and contact details
 

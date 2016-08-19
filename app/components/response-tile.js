@@ -14,7 +14,7 @@ export default Ember.Component.extend({
         }
       });
       response.save();
-      this.transitionTo('index');
+      this.transitionTo('question', params.question);
     },
   }
 });
