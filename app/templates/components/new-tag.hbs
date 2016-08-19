@@ -1,1 +1,14 @@
-{{yield}}
+{{#if addNewTag}}
+  <h1>New Tag</h1>
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="text">Tag</label>
+          {{input value=text id="text"}}
+        </div>
+        <button {{action 'saveTag1'}}>Save</button>
+      </form>
+    </div>
+{{else}}
+    <button class="btn btn-success" {{action 'tagFormShow'}}>Add New Tag</button>
+{{/if}}

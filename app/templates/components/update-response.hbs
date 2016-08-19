@@ -1,0 +1,20 @@
+{{#if updateResponseForm}}
+  <h4>Update {{response.title}}</h4>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="author">Name</label>
+        {{input value=author id="author" placeholder=response.author}}
+      </div>
+
+      <div class="form-group">
+        <label for="content">Response</label>
+        {{input value=content id="content" placeholder=response.content}}
+      </div>
+
+      <button {{action 'update' response}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button class="btn btn-primary" {{action 'updateResponseForm'}}>Update this Response</button>
+{{/if}}

@@ -1,1 +1,8 @@
-{{yield}}
+<li>
+  <div class="well">
+    <h3>Name: {{response.author}}</h3>
+    <p>{{response.content}}</p>
+    <button class="btn btn-danger" {{action 'delete' response}}>Delete this Response</button>
+    {{update-response response=response update="update"}}
+  </div>
+</li>

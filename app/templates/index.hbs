@@ -1,11 +1,9 @@
 <div class="container">
   <div class="col-sm-6 col-sm-offset-1">
     <ul>
+      <h3> Recent Questions</h3>
       {{#each model.questions as |question|}}
-        {{#link-to 'question' question.id}}
-          <h3>{{question.title}}</h3>
-          <p>{{question.author}}</p>
-        {{/link-to}}
+        {{question-tile question=question}}
       {{/each}}
     </ul>
     {{new-question save2="save3"}}

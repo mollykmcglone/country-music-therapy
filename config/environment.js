@@ -13,6 +13,13 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: "AIzaSyDZnwL52CxE1I78Tlx8VaA7OlGDsG_a8ws",
+      authDomain: "country-music-therapy.firebaseapp.com",
+      databaseURL: "https://country-music-therapy.firebaseio.com",
+      storageBucket: "country-music-therapy.appspot.com",
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

@@ -12,6 +12,16 @@
     {{update-question question=model update="update"}}
   </div>
 </div>
+<div class="row">
+  <div class="col-sm-6 col-offset-2">
+    <h3>Responses to {{model.title}}</h3>
+      <ul>
+        {{#each model.responses as |response|}}
+          {{response-tile response=response destroyResponse="destroyResponse"}}
+        {{/each}}
+      </ul>
+  </div>
+</div>
 
 {{new-response save2="save3" question=model}}
 {{new-tag saveTag2="saveTag3" question=model}}
