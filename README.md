@@ -39,11 +39,11 @@ You will need the following things properly installed on your computer.
 
 ## Database
 
-You will need to connect your app to a database on Firebase.
-* Visit https://firebase.google.com/ and set up a free account (if needed)
-* Choose "Create New Project" on the Firebase dashboard and name your project's database with the same name as your app
+When you clone the app, it is connected to a database on my Firebase account.  In order to re-purpose this app you will need to connect your app to a different database on your own Firebase account.
+* Visit https://firebase.google.com/ and set up a free account (if needed).
+* Choose "Create New Project" on the Firebase dashboard and name your project's database with the same name as your app.
 * From the Firebase console for your new project, click the "Add Firebase to your web app" button and copy the information that appears (apiKey, authoDomain, databaseURL, and storageBucket).
-* Open your config/environment.js file and add the following inside the ENV section, using the info you copied from Firebase on the appropriate lines:
+* Open your config/environment.js file and edit the following inside the ENV section, using the info you copied from Firebase on the appropriate lines:
 ```
 firebase: {
        apiKey: 'YOUR-API-KEY-HERE', # REPLACE INFO HERE
