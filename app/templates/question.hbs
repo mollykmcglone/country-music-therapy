@@ -3,16 +3,16 @@
     <div class="col-sm-10 col-sm-offset-1">
       <h1 class="blue center"> {{model.title}}</h1>
       <h3>{{model.body}} ~{{model.author}}</h3><br>
-      <ul><h4 class="brown">Tags:
+      <ul><h4><span class="brown">Tags:</span>
         {{#each model.tags as |tag|}}
-          {{tag.text}}
+          <span class="italic">{{tag.text}}</span>
         {{/each}}
-      </h4></ul><br>
+        </h4>{{new-tag saveTag2="saveTag3" question=model}}</ul><br>
     </div>
   </div>
   <div class="row">
     <div class="col-sm-3 col-sm-offset-3">
-      <button class="btn btn-block btn-danger" {{action 'delete' question}}>Delete Request</button>
+      <button class="btn btn-block theme" {{action 'delete' question}}>Delete Request</button>
     </div>
     <div class="col-sm-6">
       {{update-question question=model update="update"}}
@@ -20,7 +20,7 @@
   </div>
   <br>
   <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
+    <div class="col-sm-8 col-sm-offset-1">
       <h3>Responses:</h3>
     </div>
   </div>
@@ -35,11 +35,8 @@
   </div>
 
   <div class="row">
-    <div class="col-sm-2 col-sm-offset-3">
+    <div class="col-sm-8 col-sm-offset-1">
       {{new-response save2="save3" question=model}}
-    </div>
-    <div class="col-sm-2 col-sm-offset-1">
-      {{new-tag saveTag2="saveTag3" question=model}}
     </div>
   </div>
 </div>

@@ -1,5 +1,5 @@
 <ul>
-  <h2 class="brown">Tags</h2>
+  <h2 class="brown">Tags</h2><br>
   {{#each tags as |tag|}}
     <li>{{#link-to 'tag' tag.id}}<p class="white">{{tag.text}}</p>{{/link-to}}</li>
   {{/each}}

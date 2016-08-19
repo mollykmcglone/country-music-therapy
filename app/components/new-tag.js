@@ -12,6 +12,7 @@ export default Ember.Component.extend({
         text: this.get('text'),
         question: this.get('question'),
       };
+      this.set('text', '');
       this.set('addNewTag', false);
       this.sendAction('saveTag2', params);
     }

@@ -2,7 +2,7 @@
   <div class="well lightblue">
     <h4>{{response.author}} says...</h4>
     <p>{{response.content}}</p>
-    <button class="btn btn-danger" {{action 'delete' response}}>Delete this Response</button>
+    <button class="btn btn-sm theme4" {{action 'delete' response}}>Delete Response</button>
     {{update-response response=response update="update"}}
   </div>
 </li>
