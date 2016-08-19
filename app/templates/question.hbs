@@ -1,20 +1,20 @@
 <div class="row">
-  <div class="col-sm-6 col-sm-offset-2">
-    <h1> {{model.title}}</h1>
-    <p>{{model.body}}</p>
-    <p> by {{model.author}}</p>
-    <p>Tags:<ul>
+  <div class="col-sm-10 col-sm-offset-1">
+    <h1 class="blue center"> {{model.title}}</h1>
+    <h3>{{model.body}} ~{{model.author}}</h3>
+    <ul><p class="brown">Tags:
       {{#each model.tags as |tag|}}
-        {{tag.text}},
+        {{tag.text}}
       {{/each}}
-    </ul></p>
-    <button class="btn btn-danger" {{action 'delete' question}}>Delete this Question</button>
+    </p></ul>
+    <button class="btn btn-danger" {{action 'delete' question}}>Delete this Request</button>
     {{update-question question=model update="update"}}
   </div>
 </div>
+<br>
 <div class="row">
-  <div class="col-sm-6 col-offset-2">
-    <h3>Responses to {{model.title}}</h3>
+  <div class="col-sm-10 col-offset-2">
+    <h3 class="center">Responses to {{model.title}}</h3>
       <ul>
         {{#each model.responses as |response|}}
           {{response-tile response=response destroyResponse="destroyResponse"}}
@@ -23,5 +23,9 @@
   </div>
 </div>
 
-{{new-response save2="save3" question=model}}
-{{new-tag saveTag2="saveTag3" question=model}}
+<div class="row">
+  <div class="col-sm-3 col-sm-offset-2">
+    {{new-response save2="save3" question=model}}
+    {{new-tag saveTag2="saveTag3" question=model}}
+  </div>
+</div>
