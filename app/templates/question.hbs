@@ -1,31 +1,45 @@
-<div class="row">
-  <div class="col-sm-10 col-sm-offset-1">
-    <h1 class="blue center"> {{model.title}}</h1>
-    <h3>{{model.body}} ~{{model.author}}</h3>
-    <ul><p class="brown">Tags:
-      {{#each model.tags as |tag|}}
-        {{tag.text}}
-      {{/each}}
-    </p></ul>
-    <button class="btn btn-danger" {{action 'delete' question}}>Delete this Request</button>
-    {{update-question question=model update="update"}}
-  </div>
-</div>
-<br>
-<div class="row">
-  <div class="col-sm-10 col-offset-2">
-    <h3 class="center">Responses to {{model.title}}</h3>
-      <ul>
-        {{#each model.responses as |response|}}
-          {{response-tile response=response destroyResponse="destroyResponse"}}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <h1 class="blue center"> {{model.title}}</h1>
+      <h3>{{model.body}} ~{{model.author}}</h3><br>
+      <ul><h4 class="brown">Tags:
+        {{#each model.tags as |tag|}}
+          {{tag.text}}
         {{/each}}
-      </ul>
+      </h4></ul><br>
+    </div>
   </div>
-</div>
+  <div class="row">
+    <div class="col-sm-3 col-sm-offset-3">
+      <button class="btn btn-block btn-danger" {{action 'delete' question}}>Delete Request</button>
+    </div>
+    <div class="col-sm-6">
+      {{update-question question=model update="update"}}
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h3>Responses:</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+        <ul>
+          {{#each model.responses as |response|}}
+            {{response-tile response=response destroyResponse="destroyResponse"}}
+          {{/each}}
+        </ul>
+    </div>
+  </div>
 
-<div class="row">
-  <div class="col-sm-3 col-sm-offset-2">
-    {{new-response save2="save3" question=model}}
-    {{new-tag saveTag2="saveTag3" question=model}}
+  <div class="row">
+    <div class="col-sm-2 col-sm-offset-3">
+      {{new-response save2="save3" question=model}}
+    </div>
+    <div class="col-sm-2 col-sm-offset-1">
+      {{new-tag saveTag2="saveTag3" question=model}}
+    </div>
   </div>
 </div>

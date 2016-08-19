@@ -1,26 +1,26 @@
 {{#if addNewQuestion}}
-  <h2>New Help Request</h2>
+  <h2 class="brown">New Help Request</h2><br>
   <div>
     <form>
       <div class="form-group">
-        <label for="title">Title</label>
-        {{input value=title id="title"}}
+        <label for="author">Your Name:</label>
+        {{input class="form-control" value=author id="author"}}
       </div>
 
       <div class="form-group">
-        <label for="author">Name</label>
-        {{input value=author id="author"}}
+        <label for="title">Brief Title for Request:</label>
+        {{input class="form-control" value=title id="title"}}
       </div>
 
       <div class="form-group">
-        <label for="body">Your Request</label>
-        {{input value=body id="body"}}
+        <label for="body">Request Details:</label>
+        {{input class="form-control" value=body id="body"}}
       </div>
       <button class="btn btn-lg theme" {{action 'save1'}}>Submit</button>
     </form>
   </div>
 {{else}}
-  <div class="col-sm-6 col-sm-offset-4">
+  <div class="col-sm-6 col-sm-offset-2">
     <button class="btn btn-large btn-block theme" {{action 'questionFormShow'}}>Request Help</button>
   </div>
 {{/if}}

@@ -1,17 +1,17 @@
-<nav class="navbar">
-  <div class="container-fluid">
+<div class="container">
+  <nav class="navbar navbar-light">
     <ul class="nav navbar-nav navbar-left">
-      <li class="active"><h3>{{#link-to 'index'}}Home{{/link-to}}</h3></li>
+      <li>{{#link-to 'index'}}<h4 class="brown">Home</h4>{{/link-to}}</li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li><h3>{{#link-to 'about'}}About{{/link-to}}</h3></li>
+      <li>{{#link-to 'about'}}<h4 class="brown">About</h4>{{/link-to}}</li>
     </ul>
-  </div>
-</nav>
-<div class="container">
+  </nav>
   <div class="jumbotron"></div>
-    {{outlet}}
-    <div class="footer">
-      <p>&copy; 2016 Molly McGlone</p>
-    </div>
+</div>
+<div class="container">
+  {{outlet}}
+</div>
+<div class="footer">
+  <p>&copy; 2016 Molly McGlone</p>
 </div>
