@@ -1,1 +1,4 @@
-{{outlet}}
+<h1>Help requests tagged with: {{model.text}}</h1>
+{{#each model.questions as |question| }}
+  <li>{{#link-to 'question' question.id}}{{question.title}} by {{question.author}}{{/link-to}}</li>
+{{/each}}
