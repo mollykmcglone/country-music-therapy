@@ -1,0 +1,6 @@
+<h3>See Questions by Tag</h3>
+<ul>
+  {{#each tags as |tag|}}
+    <li>{{#link-to 'tag' tag.id}}{{tag.text}}{{/link-to}}</li>
+  {{/each}}
+</ul>

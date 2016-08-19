@@ -6,8 +6,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('question');
-  this.route('tag');
+  this.route('question', {path: '/question/:question_id'});
+  this.route('tag', {path: '/tag/:tag_id'});
   this.route('contact');
   this.route('about');
 });
