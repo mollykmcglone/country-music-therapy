@@ -1,0 +1,23 @@
+.footer {
+  text-align: center;
+  margin-top: 4em;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: inherit;
+}
+
+@media (max-width: 992px){
+  img {
+    display: none;
+  }
+}
+
+.center {
+  text-align: center;
+}
+
+.form-group {
+  font-size: 1.5em;
+}

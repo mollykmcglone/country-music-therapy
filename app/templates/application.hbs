@@ -1,0 +1,21 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav navbar-left">
+      <li class="active"><h3>{{#link-to 'index'}}Home{{/link-to}}</h3></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active">{{#link-to 'contact'}}Contact{{/link-to}}</li>
+      <li class="active">{{#link-to 'about'}}About{{/link-to}}</li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Country Music Therapy</h1>
+    <p class="lead">Get your fix</p>
+  </div>
+  {{outlet}}
+</div>
+<div class="footer">
+  <p>&copy; 2016 Molly McGlone</p>
+</div>
