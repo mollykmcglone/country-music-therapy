@@ -1,6 +1,6 @@
 # Country-music-therapy
 
-#### A web app to track information about meals eaten and display meals by date and/or caloric content.
+#### A web app to help people deal with their life challenges with the power of country music.
 
 #### By Molly McGlone, August 2016
 
