@@ -36,14 +36,28 @@ export default Ember.Route.extend({
     },
 
     saveTag3(params) {
-      var newTag = this.store.createRecord('tag', params);
+      var self=this;
       var question = params.question;
-      question.get('tags').addObject(newTag);
-      newTag.save().then(function(){
-        return question.save();
-      });
-      this.transitionTo('question', params.question);
-    },
+
+      this.store.query('tag', {
+        orderBy: 'text',
+        equalTo: params.text}).then(function(existingTags) {
+          if(existingTags.get('length') === 0) {
+            var tag = self.store.createRecord('tag', params);
+          } else {
+            var tag = existingTags.get('firstObject');
+          }
+
+          if(question.get('tags').toArray().includes(tag)) {
+          } else {
+            question.get('tags').addObject(tag);
+            tag.get('questions').addObject(question);
+            question.save();
+            tag.save();
+          }
+          self.transitionTo('question', params.question);
+        });
+      },
 
     destroyResponse(response) {
       response.destroyRecord();
