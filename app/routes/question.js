@@ -29,7 +29,12 @@ export default Ember.Route.extend({
       var response_deletions = question.get('responses').map(function(response) {
         return response.destroyRecord();
       });
-      Ember.RSVP.all(response_deletions).then(function() {
+      var tag_deletions = question.get('tags').map(function(tag) {
+        if (tag.get('number_of_questions') === 1) {
+          return tag.destroyRecord();
+        }
+      });
+      Ember.RSVP.all(response_deletions, tag_deletions).then(function() {
         return question.destroyRecord();
       });
       this.transitionTo('index');
@@ -44,8 +49,10 @@ export default Ember.Route.extend({
         equalTo: params.text}).then(function(existingTags) {
           if(existingTags.get('length') === 0) {
             var tag = self.store.createRecord('tag', params);
+            tag.incrementProperty('number_of_questions', 1);
           } else {
             var tag = existingTags.get('firstObject');
+            tag.incrementProperty('number_of_questions', 1);
           }
 
           if(question.get('tags').toArray().includes(tag)) {
