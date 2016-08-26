@@ -32,6 +32,10 @@ export default Ember.Route.extend({
       var tag_deletions = question.get('tags').map(function(tag) {
         if (tag.get('number_of_questions') === 1) {
           return tag.destroyRecord();
+        } else {
+          tag.get('questions').removeObject(question);
+          tag.decrementProperty('number_of_questions', 1)
+          return tag.save();
         }
       });
       Ember.RSVP.all(response_deletions, tag_deletions).then(function() {
