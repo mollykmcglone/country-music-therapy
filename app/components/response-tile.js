@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+    favoriteResponses: Ember.inject.service(),
+
   actions: {
     delete(response) {
       if (confirm('Are you sure you want to delete this response?')) {
@@ -19,6 +21,10 @@ export default Ember.Component.extend({
 
     upvote(response) {
       this.sendAction('upvote', response);
+    },
+
+    addToFavorites(response) {
+      this.get('favoriteResponses').add(response);
     }
   }
 });

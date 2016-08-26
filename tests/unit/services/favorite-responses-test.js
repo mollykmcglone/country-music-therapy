@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('service:favorite-questions', 'Unit | Service | favorite questions', {
+moduleFor('service:favorite-responses', 'Unit | Service | favorite responses', {
   // Specify the other units that are required for this test.
   // needs: ['service:foo']
 });

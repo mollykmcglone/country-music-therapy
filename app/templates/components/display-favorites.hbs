@@ -1,0 +1,5 @@
+<h1 class="brown"> Your Favorite Responses:</h1>
+{{#each favoriteResponses.responses as |response|}}
+  <li>{{response.author}} says: {{response.content}}<button class="btn btn-sm theme2" {{action 'remove' response}}>Remove</button></li><br>
+{{/each}}
+<h5><button {{action 'empty'}}>Clear list</button></h5>

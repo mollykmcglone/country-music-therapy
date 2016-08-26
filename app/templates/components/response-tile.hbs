@@ -8,7 +8,8 @@
     </div>
     <div class="col-sm-4">
       <h3> Votes: {{response.votes}}</h3>
-      <button type="button" class="btn btn-success" {{action 'upvote' response}}><span class="glyphicon glyphicon-thumbs-up"></span> Vote for this!</button>
+      <button type="button" class="btn btn-success" {{action 'upvote' response}}><span class="glyphicon glyphicon-thumbs-up"></span> Vote for this!</button><br>
+      <button class="btn btn-success" {{action 'addToFavorites' response}}>Add to your Favorites</button>
     </div>
   </div>
 </li>
