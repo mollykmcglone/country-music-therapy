@@ -11,6 +11,7 @@ export default Ember.Component.extend({
       var params = {
         author: this.get('author'),
         content: this.get('content'),
+        votes: 0,
         question: this.get('question'),
       };
       this.set('author', '');

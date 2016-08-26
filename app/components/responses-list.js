@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
-  sortBy: ['votes:dsc'],
+  sortBy: ['votes:desc'],
   sortedResponses: Ember.computed.sort('responses', 'sortBy'),
 
   actions: {
@@ -13,6 +13,7 @@ export default Ember.Component.extend({
 
     upvote(response) {
       response.incrementProperty('votes', 1);
+      response.save();
     }
   }
 });
