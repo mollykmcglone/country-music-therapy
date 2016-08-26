@@ -69,5 +69,9 @@ export default Ember.Route.extend({
           self.transitionTo('question', params.question);
         });
       }
+
+    addToFavorites(question) {
+      this.get('favoriteQuestions').add(question);
+    }
   }
 });

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-10 col-sm-offset-1">
-      <h1 class="blue center"> {{model.title}}</h1>
+      <h1 class="blue center"> {{model.title}}  <button class="btn btn-success" {{action 'addToFavorites' model}}>Add to your Favorites</button></h1>
       <h3>{{model.body}} ~{{model.author}}</h3><br>
       <ul><h4><span class="brown">Tags:</span>
         {{#each model.tags as |tag|}}
