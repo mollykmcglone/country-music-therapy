@@ -1,0 +1,5 @@
+<ul>
+  {{#each sortedResponses as |response|}}
+    {{response-tile response=response destroyResponse="destroyResponse" upvote="upvote"}}
+  {{/each}}
+</ul>

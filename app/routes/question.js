@@ -64,11 +64,6 @@ export default Ember.Route.extend({
           }
           self.transitionTo('question', params.question);
         });
-      },
-
-    destroyResponse(response) {
-      response.destroyRecord();
-      this.transitionTo('question');
-    },
+      }
   }
 });

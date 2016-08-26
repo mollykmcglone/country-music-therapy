@@ -16,5 +16,9 @@ export default Ember.Component.extend({
       response.save();
       this.transitionTo('question', params.question);
     },
+
+    upvote(response) {
+      this.sendAction('upvote', response);
+    }
   }
 });

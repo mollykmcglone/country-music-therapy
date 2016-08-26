@@ -1,8 +1,14 @@
 <li>
-  <div class="well lightblue">
-    <h4>{{response.author}} says...</h4>
-    <p>{{response.content}}</p>
-    <button class="btn btn-sm theme4" {{action 'delete' response}}>Delete Response</button>
-    {{update-response response=response update="update"}}
+  <div class="row well lightblue">
+    <div class="col-sm-6">
+      <h3>{{response.author}} says...</h3>
+      <p>{{response.content}}</p>
+      <button class="btn btn-sm theme4" {{action 'delete' response}}>Delete Response</button>
+      {{update-response response=response update="update"}}
+    </div>
+    <div class="col-sm-4">
+      <h3> Votes: {{response.votes}}</h3>
+      <button type="button" class="btn btn-success" {{action 'upvote' response}}><span class="glyphicon glyphicon-thumbs-up"></span> Add a Vote!</button>
+    </div>
   </div>
 </li>
