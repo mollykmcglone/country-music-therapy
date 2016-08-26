@@ -60,7 +60,7 @@ firebase: {
 
 ## Known Issues/Bugs
 
-* Currently help requests can be tagged and users can view the help requests associated with each tag.  However, the many-to-many relationship between these models is not fully functional in that if a user adds a tag to a request in the app, a new tag object will be created that is completely independent of previous tag objects.  Duplicate tags can be created in this way, and it is not currently possible for users within the app to connect multiple help requests with the same tag object.
+* None at this time!
 
 ## Support and contact details
 
