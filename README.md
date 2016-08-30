@@ -17,6 +17,9 @@ Project Requirements:
 * Users should be able to click on a question to view additional information.
 * Allow users to add and edit questions.
 * Allow users to add answers to a question. Answers should be added and viewed on the same page as the question they respond to.
+* Allow users to upvote the answer they think is best, then sort answers by number of upvotes.
+* Use a helper to display a special icon for questions with no answers.
+* Use a service to allow users to create lists of favorite answers to reference later.
 
 ## Prerequisites
 
